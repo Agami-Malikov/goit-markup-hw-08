@@ -1,0 +1,163 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    cursor: pointer;
+  
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      height: 1px;
+      width: 14px;
+      background-color: #000000;
+      transition: background-color 250ms $cubic-b;
+    }
+  
+    &:hover::after,
+    &:hover::before {
+      background-color: $accent-color;
+    }
+  
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-bottom: 12px;
+  }
+  
+  &__item {
+    position: relative;
+  }
+  
+  &__icon {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    fill: $secondary-color;
+    transition: fill 250ms $cubic-b;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border 250ms $cubic-b;
+
+    &:focus ~ .form__icon {
+      fill: $accent-color;
+    }
+  }
+
+  &__input,
+  &__text-area {
+    padding: 12px 0 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  &__input:focus,
+  &__text-area:focus {
+    border: 1px solid $accent-color;
+    outline: $accent-color;
+  }
+
+  &__label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  &__text-area {
+    padding: 12px 0 12px 16px;
+    transition: border 250ms $cubic-b;
+    resize: none;
+    height: 120px;
+    margin-bottom: 25px;
+  }
+  
+  &__check-box {
+    position: relative;
+    padding-left: 30px;
+    font-size: inherit;
+    user-select: none;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+
+  &__link {
+    color: $accent-color;
+    margin-left: 3px;
+  }
+
+  &__check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+
+    &:checked ~ .form__check-box-custom {
+      background: $accent-color;
+      border: 2px solid $accent-color;
+    }
+
+    &:checked ~ .form__check-box-custom > .form__check-box-icon {
+      fill: $main-white-color;
+    }
+  }
+
+  &__check-box-custom {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $secondary-color;
+    cursor: pointer;
+  }
+
+  &__check-box-icon {
+    position: absolute;
+    width: 12px;
+    height: 11px;
+    left: 0;
+    top: 1px;
+    fill: transparent;
+  }
+
+  &__btn {
+    width: fit-content;
+    align-self: center;
+    padding: 10px 55px;
+  }
+
+}
+

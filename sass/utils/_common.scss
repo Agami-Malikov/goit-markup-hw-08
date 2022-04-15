@@ -1,0 +1,69 @@
+body {
+  background-color: $main-white-color;
+  color: $main-color;
+
+  font-family: 'Roboto', 'sans-serif';
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.section {
+  
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
+    padding: 60px 15px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    padding: 94px 15px;
+  }
+}
+
+.title {
+  color: $secondary-color;
+  text-align: center;
+  line-height: 1.16;
+  
+
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+

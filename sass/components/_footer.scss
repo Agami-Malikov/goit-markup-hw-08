@@ -1,0 +1,81 @@
+.footer {
+  padding: 60px 15px;
+  background-color: #2F303A;
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    font-style: normal;
+
+    transition: color 250ms $cubic-b;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__address-link {
+    color: $main-white-color;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__socials {
+    max-width: 206px;
+  }
+
+  &__socials-text,
+  &__subscr-text {
+    font-weight: 700;
+    color: $main-white-color;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__subscr-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__subscr-input {
+    width: 358px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: transparent;
+    color: $main-white-color;
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__subscr-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 29px;
+  }
+  
+  &__subscr-icon {
+    fill: $main-white-color;
+    margin-left: 10px;
+  }
+
+}

@@ -1,0 +1,137 @@
+.footer {
+  background-color: #2F303A;
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    font-style: normal;
+
+    transition: color 250ms $cubic-b;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__address-link {
+    color: $main-white-color;
+  }
+
+  &__socials-text,
+  &__subscr-text {
+    font-weight: 700;
+    color: $main-white-color;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__subscr-input {
+    padding: 15px 16px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: transparent;
+    color: $main-white-color;
+
+    &::placeholder {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__subscr-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 29px;
+  }
+  
+  &__subscr-icon {
+    fill: $main-white-color;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+
+    &__addresses,
+    &__socials {
+      margin-bottom: 60px;
+    }
+
+    &__subscr-input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__subscr-btn {
+      display: inline-block;
+    }
+    
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
+
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+
+    &__socials-text {
+      text-align: center;
+    }
+
+    &__subscr {
+      display: block;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    &__subscr-input {
+      width: 450px;
+      margin-bottom: 20px;
+    }
+
+    &__subscr-btn {
+      margin: 0 auto;
+    }
+
+  }
+  
+  @media screen and (min-width: $desktop) {
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    &__socials {
+      max-width: 206px;
+    }
+
+    &__subscr-form {
+      display: flex;
+    }
+
+    &__subscr-input {
+      width: 358px;
+      margin-right: 12px;
+    }
+
+  }
+  
+  
+  
+
+}

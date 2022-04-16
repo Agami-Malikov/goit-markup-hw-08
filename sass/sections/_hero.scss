@@ -15,7 +15,8 @@
     padding: 10px 32px;
   }
 
-  @media screen and (min-width: $mobile) {
+
+  @media screen and (max-width: $desktop) {
     padding: 118px 0;
 
     &__title {
@@ -26,6 +27,9 @@
   }
 
   @media screen and (min-width: $desktop) {
+
+    padding: 200px 0;
+
     &__title {
       font-size: 44px;
       line-height: 1.36;

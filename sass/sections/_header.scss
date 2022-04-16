@@ -54,11 +54,6 @@
 
   @media screen and (max-width: $mobile) {
     padding: 15px 16px;
-
-    // &__inner {
-    //   display: flex;
-    //   justify-content: space-between;
-    // }
     
     &__navigation {
       position: absolute;
@@ -179,24 +174,24 @@
       transition: transform 1s $cubic-b, background-color 250ms $cubic-b;
     }
 
-    &__navigation.header__navigation--active .header__menu-btn-line:nth-child(1) {
+    &__menu-btn-line.header__menu-btn-line.--active:nth-child(1) {
 
       transform: rotate(225deg) translateX(-16px);
     }
 
-    &__navigation.header__navigation--active .header__menu-btn-line:nth-child(2) {
+    &__menu-btn-line.header__menu-btn-line.--active:nth-child(2) {
     
       transform: translateX(200px);
     }
 
-    &__navigation.header__navigation--active .header__menu-btn-line:nth-child(3) {
+    &__menu-btn-line.header__menu-btn-line.--active:nth-child(3) {
 
       transform: rotate(-225deg) translateX(-16px);
       
     }
   }
 
-  @media screen and (min-width: $mobile) and (max-width: $desktop) {
+  @media screen and (min-width: $mobile) {
     padding: 25px 15px;
 
     &__logo {
@@ -230,6 +225,10 @@
       margin-left: 50px;
     }
 
+    &__navigation {
+      display: contents;
+    }
+  
     &__menu-btn,
     &__social {
       display: none;

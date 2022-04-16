@@ -1,7 +1,5 @@
 .peculiarity {
 
-  
-
   &__content {
     display: flex;
     align-items: center;
@@ -27,45 +25,40 @@
   }
 
   @media screen and (max-width: $mobile) {
+    &__item {
+      max-width: 100%;
+    }
+  }
   
-      &__item {
-        max-width: 100%;
-      }
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
   
+    &__title {
+      text-align: center;
     }
   
-     @media screen and (min-width: $mobile) and (max-width: $desktop) {
-  
-      &__title {
-        text-align: center;
-      }
-
-      &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
-      }
-      
-      &__item {
-        flex-basis: calc((100% - 2 * 30px)/(2));
-        margin: 15px;
-      }
-      
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
     }
   
-  
-    @media screen and (min-width: $desktop) {
-  
-      &__list {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      &__item {
-        max-width: 270px;
-      }
-
+    &__item {
+      flex-basis: calc((100% - 2 * 30px)/(2));
+      margin: 15px;
     }
+  }
+  
+  @media screen and (min-width: $desktop) {
+  
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &__item {
+      max-width: 270px;
+    }
+  }
 }
 
   

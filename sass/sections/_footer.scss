@@ -75,7 +75,6 @@
     &__subscr-btn {
       display: inline-block;
     }
-    
   }
 
   @media screen and (min-width: $mobile) and (max-width: $desktop) {
@@ -105,7 +104,6 @@
     &__subscr-btn {
       margin: 0 auto;
     }
-
   }
   
   @media screen and (min-width: $desktop) {
@@ -128,10 +126,5 @@
       width: 358px;
       margin-right: 12px;
     }
-
   }
-  
-  
-  
-
 }

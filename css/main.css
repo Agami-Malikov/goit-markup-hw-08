@@ -148,6 +148,10 @@ body {
   color: #2196F3;
 }
 
+.header__menu-link--active {
+  color: #2196F3;
+}
+
 .header__contacts-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,14 +184,6 @@ body {
   .header {
     padding: 15px 16px;
   }
-  .header__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .header__navigation {
     position: absolute;
     display: -webkit-box;
@@ -199,12 +195,23 @@ body {
             flex-direction: column;
     padding: 48px 0 48px 40px;
     top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
     right: 0;
-    background-color: #ccc;
+    background-color: #FFFFFF;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    -webkit-transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
   }
-  .header__menu-list, .header__contacts {
+  .header__navigation.header__navigation--active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .header__menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -220,13 +227,20 @@ body {
     font-size: 40px;
   }
   .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     margin-top: auto;
     margin-bottom: 64px;
   }
   .header__contacts-item {
     font-size: 24px;
   }
-  .header__contacts-item:nth-child(1) {
+  .header__contacts-item:nth-child(2) {
     font-size: 34px;
     color: #2196F3;
     margin-bottom: 32px;
@@ -239,8 +253,29 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-  .header__menu-btn {
+  .header__social-item {
     position: relative;
+  }
+  .header__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .header__social-item:not(:last-child)::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -12px;
+    bottom: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .header__social-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2196F3;
+  }
+  .header__menu-btn {
+    position: absolute;
+    top: 21px;
+    right: 25px;
     width: 25px;
     height: 25px;
     border: none;
@@ -260,6 +295,10 @@ body {
     background: #212121;
     -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__menu-btn-line:nth-child(1) {
     top: 0;
@@ -271,6 +310,18 @@ body {
   }
   .header__menu-btn-line:nth-child(3) {
     bottom: 0;
+  }
+  .header__navigation.header__navigation--active .header__menu-btn-line:nth-child(1) {
+    -webkit-transform: rotate(225deg) translateX(-16px);
+            transform: rotate(225deg) translateX(-16px);
+  }
+  .header__navigation.header__navigation--active .header__menu-btn-line:nth-child(2) {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  .header__navigation.header__navigation--active .header__menu-btn-line:nth-child(3) {
+    -webkit-transform: rotate(-225deg) translateX(-16px);
+            transform: rotate(-225deg) translateX(-16px);
   }
 }
 
@@ -293,9 +344,6 @@ body {
     border-bottom: 4px solid #2196F3;
     border-radius: 2px;
   }
-  .header__menu-link--active {
-    color: #2196F3;
-  }
   .header__contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -306,7 +354,7 @@ body {
   .header__contacts-item + .header__contacts-item {
     margin-left: 50px;
   }
-  .header__menu-btn {
+  .header__menu-btn, .header__social {
     display: none;
   }
 }

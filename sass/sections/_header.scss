@@ -145,7 +145,8 @@
       background-color: transparent;
       cursor: pointer;
       z-index: 2;
-
+      
+      
       &:hover .header__menu-btn-line {
         background-color: $accent-color;
       }
@@ -159,7 +160,7 @@
       height: 2px;
       background: $secondary-color;
       transition: background-color 250ms $cubic-b;
-      
+      overflow: hidden;
 
       &:nth-child(1) {
         top: 0;
@@ -181,7 +182,7 @@
 
     &__menu-btn-line.header__menu-btn-line.--active:nth-child(2) {
     
-      transform: translateX(200px);
+      transform: translateX(-500px) ;
     }
 
     &__menu-btn-line.header__menu-btn-line.--active:nth-child(3) {

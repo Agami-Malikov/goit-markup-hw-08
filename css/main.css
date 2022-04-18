@@ -209,6 +209,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .header__inner {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   .header__navigation {
     position: fixed;
     display: -webkit-box;
@@ -220,17 +225,16 @@ body {
             flex-direction: column;
     padding: 48px 0 48px 40px;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    min-height: 100%;
     background-color: #FFFFFF;
-    -webkit-transform: translateY(-1000px);
-            transform: translateY(-1000px);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     -webkit-transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 2s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
     z-index: 10;
   }
   .header__navigation.is-open {
@@ -271,17 +275,20 @@ body {
   .header__mobile-btn-line:nth-child(3) {
     bottom: 25%;
   }
-  .header__mobile-btn-line .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(1) {
-    -webkit-transform: rotate(225deg) translateX(-16px);
-            transform: rotate(225deg) translateX(-16px);
+  .header .header__mobile-btn.is-open
+.header__mobile-btn-line:nth-child(1) {
+    -webkit-transform: rotate(-225deg) translateX(-7px);
+            transform: rotate(-225deg) translateX(-7px);
   }
-  .header__mobile-btn-line .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(2) {
+  .header .header__mobile-btn.is-open
+.header__mobile-btn-line:nth-child(2) {
     -webkit-transform: translateX(-900px);
             transform: translateX(-900px);
   }
-  .header__mobile-btn-line .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(3) {
-    -webkit-transform: rotate(-225deg) translateX(-16px);
-            transform: rotate(-225deg) translateX(-16px);
+  .header .header__mobile-btn.is-open
+.header__mobile-btn-line:nth-child(3) {
+    -webkit-transform: rotate(225deg) translateX(-7px);
+            transform: rotate(225deg) translateX(-7px);
   }
   .header .nav__item:not(:last-child) {
     margin-bottom: 35px;
@@ -338,7 +345,7 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  .header__mobile {
+  .header__navigation {
     display: none;
   }
 }

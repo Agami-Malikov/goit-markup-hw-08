@@ -25,6 +25,10 @@
     text-align: center;
   }
 
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+
   @media screen and (min-width: $mobile) and (max-width: $desktop) {
 
     display: none;

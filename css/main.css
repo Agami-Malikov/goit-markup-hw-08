@@ -250,8 +250,8 @@ body {
             transform: rotate(225deg) translateX(-16px);
   }
   .header__menu-btn-line.--active:nth-child(2) {
-    -webkit-transform: translateX(-500px);
-            transform: translateX(-500px);
+    -webkit-transform: translateX(-900px);
+            transform: translateX(-900px);
   }
   .header__menu-btn-line.--active:nth-child(3) {
     -webkit-transform: rotate(-225deg) translateX(-16px);

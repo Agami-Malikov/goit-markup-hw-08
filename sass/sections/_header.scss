@@ -89,7 +89,6 @@
       cursor: pointer;
       z-index: 2;
     
-    
       &:hover .header__menu-btn-line {
         background-color: $accent-color;
       }
@@ -128,7 +127,7 @@
       
       &.--active:nth-child(2) {
       
-        transform: translateX(-500px);
+        transform: translateX(-900px);
       }
       
       &.--active:nth-child(3) {

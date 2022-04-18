@@ -75,6 +75,22 @@
 
   @media screen and (max-width: 768px) {
 
+    &__navigation {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 0 48px 40px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $main-white-color;
+      transform: translateY(-1000px);
+      transition: transform 2s $cubic-b;
+      overflow: hidden;
+      z-index: 1;
+    }
+
     &__menu-btn {
       position: fixed;
       top: 21px;
@@ -132,21 +148,6 @@
         transform: rotate(-225deg) translateX(-16px);
       
       }
-    }
-
-    &__navigation {
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      padding: 48px 0 48px 40px;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: $main-white-color;
-      transform: translateY(-1000px);
-      transition: transform 2s $cubic-b;
-      overflow: hidden;
     }
 
     &__navigation.header__navigation--active {

@@ -30,6 +30,10 @@
     &__item:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    &__img {
+      width: 100%;
+    }
   }
 
   @media screen and (min-width: $mobile) and (max-width: $desktop) {
@@ -46,6 +50,10 @@
 
     &__item:nth-child(-n + 2) {
       margin-bottom: 30px;
+    }
+
+    &__img {
+      width: 100%;
     }
   }
   

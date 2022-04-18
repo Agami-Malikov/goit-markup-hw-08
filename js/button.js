@@ -1,61 +1,13 @@
- 
-  (() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-navigation-open]"),
-    closeModalBtn: document.querySelector("[data-navigation-close]"),
-    modal: document.querySelector("[data-navigation]"),
-  };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle("header__navigation--active");
-  }
-})();
-
 (() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-btn-on]"),
-    closeModalBtn: document.querySelector("[data-btn-off]"),
-    modal: document.querySelector("[data-btn1]"),
-  };
+    const menuBtnRef = document.querySelector('[data-menu-button]');
+    const mobileMenuRef = document.querySelector('[data-menu]');
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+    menuBtnRef.addEventListener('click', () => {
+        const expanded = menuBtnRef.getAttribute('aria-expended') === 'true' || false;
+        menuBtnRef.classList.toggle('is-open');
+        menuBtnRef.setAttribute('aria-expended', !expanded);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("--active");
-  }
-})();
-
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-btn-on]"),
-    closeModalBtn: document.querySelector("[data-btn-off]"),
-    modal: document.querySelector("[data-btn2]"),
-  };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle("--active");
-  }
-})();
-
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-btn-on]"),
-    closeModalBtn: document.querySelector("[data-btn-off]"),
-    modal: document.querySelector("[data-btn3]"),
-  };
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function toggleModal() {
-    refs.modal.classList.toggle("--active");
-  }
+        mobileMenuRef.classList.toggle('is-open');
+    });
 })();
 

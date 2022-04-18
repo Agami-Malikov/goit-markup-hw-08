@@ -1,5 +1,6 @@
 .header {
-  
+  z-index: 5;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -74,7 +75,7 @@
   }
 
   @media screen and (max-width: 768px) {
-
+    
     &__navigation {
       position: fixed;
       display: flex;
@@ -88,70 +89,65 @@
       transform: translateY(-1000px);
       transition: transform 2s $cubic-b;
       overflow: hidden;
-      z-index: 1;
+      z-index: 10;
     }
 
-    &__menu-btn {
-      position: fixed;
-      top: 21px;
-      right: 25px;
-      width: 25px;
-      height: 25px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-      z-index: 2;
+    &__navigation.is-open {
+      transform: translateY(0);
+    }
+
+    &__mobile-btn {
+      position: relative;
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      z-index: 15;
     
-      &:hover .header__menu-btn-line {
+      &:hover .header__mobile-btn-line {
         background-color: $accent-color;
       }
     }
     
-    &__menu-btn-line {
+    &__mobile-btn-line {
       position: absolute;
       content: '';
+      top: 0;
       left: 0;
       width: 24px;
       height: 2px;
       background: $secondary-color;
       transition: background-color 250ms $cubic-b;
-      overflow: hidden;
     
       &:nth-child(1) {
-        top: 0;
+        top: 25%;
       }
     
       &:nth-child(2) {
         top: 50%;
-        transform: translateY(-50%);
       }
     
       &:nth-child(3) {
-        bottom: 0;
+        bottom: 25%;
       }
     
       transition: transform 1s $cubic-b,
       background-color 250ms $cubic-b;
 
-      &.--active:nth-child(1) {
+      .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(1) {
       
         transform: rotate(225deg) translateX(-16px);
       }
       
-      &.--active:nth-child(2) {
+      .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(2) {
       
         transform: translateX(-900px);
       }
       
-      &.--active:nth-child(3) {
+      .header__mobile-btn.is-open .header__mobile-btn-line:nth-child(3) {
       
         transform: rotate(-225deg) translateX(-16px);
       
       }
-    }
-
-    &__navigation.header__navigation--active {
-      transform: translateY(0);
     }
 
     .nav {

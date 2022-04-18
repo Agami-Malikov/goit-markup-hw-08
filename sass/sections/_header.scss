@@ -42,8 +42,6 @@
     margin-left: auto;
   }
 
-  
-
   &__contacts-link {
     display: flex;
     align-items: center;
@@ -73,7 +71,6 @@
   @media screen and (max-width: $mobile) {
 
     padding: 16px 15px;
-
   }
 
   @media screen and (max-width: 768px) {
@@ -155,6 +152,7 @@
     &__navigation.header__navigation--active {
       transform: translateY(0);
     }
+
     .nav {
 
       &__item:not(:last-child) {
@@ -255,8 +253,6 @@
     &__contacts-item + &__contacts-item {
       margin-left: 50px;
     }
-
   }
-
 }
 

@@ -466,7 +466,7 @@ body {
 
 @media screen and (min-width: 1600px) {
   .hero {
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
   }
 }

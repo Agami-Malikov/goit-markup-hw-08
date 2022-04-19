@@ -27,6 +27,10 @@
   @media screen and (max-width: $mobile) {
     &__item {
       max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
   

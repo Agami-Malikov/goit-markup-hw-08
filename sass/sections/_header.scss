@@ -15,7 +15,6 @@
   }
 
   &__menu-link {
-    position: relative;
     color: $secondary-color;
 
     font-weight: 500;
@@ -24,13 +23,15 @@
     &:hover,
     &:focus,
     &--active {
+      position: relative;
       color: $accent-color;
+      font-weight: 500;
     }
 
     &--active::before {
       position: absolute;
       content: '';
-      bottom: -32px;
+      bottom: -38px;
       left: 0;
       width: 100%;
       border-bottom: 4px solid $accent-color;
@@ -77,6 +78,10 @@
 
   @media screen and (max-width: 768px) {
 
+    position: fixed;
+    background-color: $main-white-color;
+    width: 100%;
+
     &__inner {
       top: 0;
       left: 0;
@@ -106,8 +111,8 @@
     &__mobile-btn {
       position: relative;
       margin-left: auto;
-      width: 40px;
-      height: 40px;
+      width: 25px;
+      height: 25px;
       z-index: 15;
     
       &:hover .header__mobile-btn-line {
@@ -118,46 +123,47 @@
     &__mobile-btn-line {
       position: absolute;
       content: '';
-      top: 0;
-      left: 0;
+      left: 50%;
       width: 24px;
       height: 2px;
       background: $secondary-color;
+      transform: translate(-50%);
       transition: background-color 250ms $cubic-b;
     
       &:nth-child(1) {
-        top: 25%;
+        top: 0;
       }
     
       &:nth-child(2) {
-        top: 50%;
+        top: 48%;
       }
     
       &:nth-child(3) {
-        bottom: 25%;
+        bottom: 0;
       }
     
-      transition: transform 1s $cubic-b,
-      background-color 250ms $cubic-b;
+      transition: transform 250ms $cubic-b,
+      background-color 250ms $cubic-b,
+      scale 250ms $cubic-b ;
 
     }
 
     .header__mobile-btn.is-open
     .header__mobile-btn-line:nth-child(1) {
     
-      transform: rotate(-225deg) translateX(-7px);
+      transform: rotate(-45deg) translateX(-16px);
     }
     
     .header__mobile-btn.is-open
     .header__mobile-btn-line:nth-child(2) {
     
-      transform: translateX(-900px);
+      transform: scale(0);
     }
     
     .header__mobile-btn.is-open
     .header__mobile-btn-line:nth-child(3) {
     
-      transform: rotate(225deg) translateX(-7px);
+      transform: rotate(45deg) translateX(-16px);
     
     }
 

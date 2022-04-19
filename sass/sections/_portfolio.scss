@@ -1,6 +1,4 @@
 .portfolio {
-  border-top: 1px solid #ECECEC;
-  
 
   &__menu-list {
     display: flex;
@@ -127,8 +125,7 @@
   }
 
   @media screen and (min-width: $mobile) and (max-width: $desktop) {
-
-    padding: 140px 15px;
+    padding: 60px 15px;
 
     &__menu-list {
       justify-content: center;
@@ -161,8 +158,6 @@
   }
 
   @media screen and (min-width: $desktop) {
-
-    padding: 100px 15px 115px 15px;
 
     &__menu-list {
       justify-content: center;

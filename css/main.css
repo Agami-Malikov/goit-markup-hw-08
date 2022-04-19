@@ -64,6 +64,12 @@ body {
   line-height: 1.14;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -123,6 +129,7 @@ body {
 
 .header {
   z-index: 5;
+  border-bottom: 1px solid #ECECEC;
 }
 
 .header__inner {
@@ -214,6 +221,7 @@ body {
     position: fixed;
     background-color: #FFFFFF;
     width: 100%;
+    top: 0;
   }
   .header__inner {
     top: 0;
@@ -879,10 +887,6 @@ body {
   }
 }
 
-.portfolio {
-  border-top: 1px solid #ECECEC;
-}
-
 .portfolio__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1022,7 +1026,7 @@ body {
 
 @media screen and (min-width: 479px) and (max-width: 1200px) {
   .portfolio {
-    padding: 140px 15px;
+    padding: 60px 15px;
   }
   .portfolio__menu-list {
     -webkit-box-pack: center;
@@ -1061,9 +1065,6 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .portfolio {
-    padding: 100px 15px 115px 15px;
-  }
   .portfolio__menu-list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

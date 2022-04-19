@@ -1,5 +1,6 @@
 .header {
   z-index: 5;
+  border-bottom: 1px solid #ECECEC;
 
   &__inner {
     display: flex;
@@ -80,6 +81,7 @@
     position: fixed;
     background-color: $main-white-color;
     width: 100%;
+    top: 0;
 
     &__inner {
       top: 0;

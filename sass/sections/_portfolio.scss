@@ -1,5 +1,6 @@
 .portfolio {
   border-top: 1px solid #ECECEC;
+  
 
   &__menu-list {
     display: flex;
@@ -127,6 +128,8 @@
 
   @media screen and (min-width: $mobile) and (max-width: $desktop) {
 
+    padding: 140px 15px;
+
     &__menu-list {
       justify-content: center;
       margin-bottom: 30px;
@@ -135,9 +138,12 @@
     &__card-list {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
 
     &__card-item {
+      text-align: center;
       width: calc(50% - 30px);
       margin: 15px;
     }

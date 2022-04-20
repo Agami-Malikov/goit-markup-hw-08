@@ -84,6 +84,8 @@
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: baseline;
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     &__socials-text {

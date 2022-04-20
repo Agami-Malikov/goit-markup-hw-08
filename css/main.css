@@ -843,6 +843,8 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    max-width: 760px;
+    margin: 0 auto;
   }
   .footer__socials-text {
     text-align: center;
